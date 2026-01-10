@@ -191,7 +191,7 @@ Result:
 This is why Spark SQL can beat naïve MapReduce jobs by miles.
 
 ---
-![](7.SparkSQLexecutionflow.png)
+![](images/7.SparkSQLexecutionflow.png)
 
 ---
  **Mental Model**
