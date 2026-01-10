@@ -96,17 +96,18 @@ It:
 If you cached something, **you own it**.  `unpersist` is how you clean up.
 
 ---
-## The mental model to keep
+
+![](images/9.Caching&Persistence.png)
+
+---
+**Mental Model**
+- Cache trades memory for recomputation
+- Cache only reused data
+- Memory is finite and shared
+- Unpersist aggressively
 
 Here’s the model that never fails:
 
 > **Spark will happily recompute anything you don’t explicitly tell it to keep.**
 > 
 > **Caching is telling Spark what is worth remembering.**
-
-Memory is limited.  
-Recomputation is expensive.
-
----
-
-![](images/9.Caching&Persistence.png)

@@ -1,7 +1,7 @@
 ## **Topic 2 - Apache Spark Architecture (how Spark actually runs)**
 
 ![](images/2.1.ApacheSparkArchitecture.png)
-### 1) Driver — the brain 🧠
+### 1) Driver — the brain
 
 The **Driver** is where your Spark application starts.
 **What it does:**
@@ -16,7 +16,7 @@ If the **driver dies**, your job dies.
 This is why driver memory matters later.
 
 ---
-### 2) Executors — the muscle 💪
+### 2) Executors — the muscle
 
 **Executors** are worker processes.
 **What they do:**
@@ -33,7 +33,7 @@ This is why driver memory matters later.
 More executors = more parallelism (until you hit bottlenecks).
 
 ---
-### 3) Cluster Manager — the landlord 🏢
+### 3) Cluster Manager — the landlord
 
 Spark doesn’t own machines. It **asks** for them.
 That asking is handled by a **Cluster Manager**.
@@ -50,7 +50,7 @@ That asking is handled by a **Cluster Manager**.
 
 Spark focuses on _data processing_, not infrastructure drama.
 
-![](images/2.1.ApacheSparkArchitecture.png)
+![](images/2.2.ApacheSparkArchitectureflow.png)
 
 ---
 ### How a Spark job flows (big picture)
@@ -72,3 +72,8 @@ This flow is **always happening**.
 ![](images/2.3.Sparkjobflows.png)
 
 ---
+**Mental Model**
+- Driver plans and coordinates
+- Executors execute tasks
+- Cluster manager allocates resources
+- Driver failure = job failure

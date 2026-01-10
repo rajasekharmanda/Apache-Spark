@@ -59,20 +59,11 @@ If Spark executed each step immediately, it would:
 
 Lazy execution lets Spark act like a **query compiler**, not a script runner.
 
-![](images/4.1TransformationsvsActions.png)
----
-### Mental model to lock in
-
-- Transformations = intentions
-- Actions = execution
-- Spark is a planner first, executor second
-- One action can trigger many transformations
-
-This single concept explains:
-- performance
-- debugging
-- “why did Spark run this twice”
-- “why nothing happened”
-
----
 ![](images/4.TransformationsvsActions.png)
+
+---
+**Mental Model**
+- Transformations describe intent
+- Actions trigger execution
+- No action → no work
+- One action executes many steps

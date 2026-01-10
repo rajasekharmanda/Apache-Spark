@@ -97,11 +97,12 @@ Skew is not a Spark bug.
 It’s a data reality problem.
 
 ---
-### Mental model to keep
-
-- Partition = unit of parallelism
-- Task = execution of a partition
-- Cores limit concurrency
-- Shuffles reshape partitions (often badly)
----
 ![](images/6.Partitions&Parallelism.png)
+
+---
+**Mental Model**
+- Partition = unit of parallelism
+- One partition → one task
+- Too few = idle CPUs
+- Too many = overhead
+- Partitioning beats micro-optimizations

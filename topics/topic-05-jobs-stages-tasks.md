@@ -67,10 +67,11 @@ Spark runs:
 This is real parallelism.
 
 ---
-### Mental model to keep
-- Action → Job
-- Shuffle → Stage boundary
-- Partition → Task
-- Executors run tasks, not jobs
----
 ![](images/5.HierarchyofSparkexecution.png)
+
+---
+**Mental Model**
+- Action creates a job
+- Shuffle creates stage boundaries
+- Tasks process partitions
+- Most slowness comes from shuffles

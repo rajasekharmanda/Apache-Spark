@@ -62,7 +62,7 @@ For most data engineers:
 **DataFrame → use**  
 **Dataset → recognize**
 
-![](images/3.Sparkdatamodel.png)
+![](images/3.dataabstraction.png)
 
 ---
 ### The killer concept: Lazy Evaluation
@@ -114,4 +114,12 @@ It **recomputes from lineage**.
 
 That’s the “resilient” in RDD.
 
-![](images/3.1.LazyEvaluation&DAGGraph.png)
+---
+![](images/3.Sparkdatamodel.png)
+
+---
+**Mental Model**
+- RDD explains internals
+- DataFrames enable optimization
+- Schema unlocks performance
+- Spark behaves like a compiler

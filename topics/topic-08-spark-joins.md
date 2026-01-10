@@ -124,17 +124,17 @@ Skew makes Spark look broken. It’s not.
 Joins reward preparation and punish optimism.
 
 ---
-### The big mental shift
-
-Joining is not a “line of code”.  
-It’s a **cluster-wide operation**.
-
-Every join is a design decision.
-
----
 ![](images/8.1.SparkJoinStrategies.png)
 
 ![](images/8.2.SparkJoinStrategies.png)
 
-- Refer:: https://faun.pub/primer-on-spark-join-strategy-134e7340f7a6
-- 
+---
+
+**Mental Model**
+- Joins move data across cluster
+- Broadcast small datasets
+- Big joins cause shuffles
+- Skewed keys create stragglers
+- Joining is not a “line of code”.  
+- It’s a **cluster-wide operation**.
+- Every join is a design decision.

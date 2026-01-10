@@ -47,3 +47,10 @@ Spark assumes machines will fail. That’s not pessimism—that’s realism.
 
 ![Apache Spark](images/1.WhatisApacheSpark.png)
 
+---
+**Mental Model**
+- Spark is a **distributed compute engine**, not storage or a database
+- You describe **what** to do; Spark decides **how** to do it
+- Spark exists because single machines don’t scale to big data
+- Failures are normal; recomputation is the strategy
+- Speed comes from **parallelism + memory**, not magic

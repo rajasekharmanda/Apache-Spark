@@ -7,9 +7,6 @@ Modern Spark is basically:
 This is why **Apache Spark** works best when you stay high-level.
 
 ---
-![](images/7.1SparkSQL&theCatalystOptimizer.png)
-
----
 ### Spark SQL: not “just SQL”
 
 Spark SQL is:
@@ -194,11 +191,15 @@ Result:
 This is why Spark SQL can beat naïve MapReduce jobs by miles.
 
 ---
-![](images/7.2SparkSQLexecutionflow.png)
+![](7.SparkSQLexecutionflow.png)
 
 ---
-### Mental shift to lock in
-
+ **Mental Model**
+ 
+- All APIs become SQL plans
+- Catalyst rewrites logic
+- High-level code performs better
+- Trust optimizer before tuning
 - Spark is a **compiler**, not a script runner
 - High-level code = more optimization
 - Trust Catalyst before micro-optimizing

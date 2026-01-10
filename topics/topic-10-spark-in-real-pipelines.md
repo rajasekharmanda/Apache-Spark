@@ -9,6 +9,7 @@ Spark is usually:
 - doing work that is too big, too slow, or too complex for simple tools
 ---
 ![](images/10.ApacheSparkindatapipelinesarchitecture.png)
+
 ---
 ## Real-world ETL pipeline layers (mental model)
 
@@ -204,9 +205,12 @@ BI / ML / APIs
 
 ```
 
-## The mental model that actually sticks
-
-Here it is — the one worth remembering:
+---
+**Mental Model**
+- Spark is rarely the whole pipeline
+- Owns heavy transformation layer
+- Batch first, streaming when needed
+- Storage + compute is a contract
 
 > **The lakehouse is not a tool.  
 > It’s a contract between storage and compute.**
